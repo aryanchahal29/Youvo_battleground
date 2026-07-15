@@ -1,0 +1,6 @@
+{
+  "name": "YouVo Battleground",
+  "description": "An interactive battleground where multiple AI minds think independently, challenge each other's reasoning, and converge on one clear conclusion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

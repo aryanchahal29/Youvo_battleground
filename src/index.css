@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark-theme, .dark-theme *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Inter", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --animate-gradient: gradient 5s linear infinite;
+
+  --animate-shimmer: shimmer 3s infinite;
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAFAFA; /* Light neutral */
+  color: #171717; /* neutral-900 */
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbars matching Sophisticated Dark aesthetic */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626; /* neutral-800 */
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #404040; /* neutral-700 */
+}
+
+/* Dark theme overrides inspired by YouVo premium dark login theme (#0E0E11 background) */
+.dark-theme {
+  --bg-main: #0E0E11;
+  --bg-card: #14141A;
+  --border-color: #25252E;
+  --text-main: #F3F4F6;
+  --text-muted: #9CA3AF;
+  --bg-input: #0A0A0E;
+
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+}
+
+.dark-theme header {
+  background-color: #121217 !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+.dark-theme h1, 
+.dark-theme h2, 
+.dark-theme h3, 
+.dark-theme h4, 
+.dark-theme h5, 
+.dark-theme h6,
+.dark-theme span.text-neutral-900,
+.dark-theme span.text-neutral-950 {
+  color: #FFFFFF !important;
+}
+
+.dark-theme p, 
+.dark-theme li {
+  color: #D1D5DB !important;
+}
+
+/* Override all general white cards to dark modern ones */
+.dark-theme .bg-white,
+.dark-theme .bg-white\/80 {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+.dark-theme div[id^="speaker-card-"],
+.dark-theme .rounded-2xl.border,
+.dark-theme .rounded-xl.border,
+.dark-theme .border-neutral-200,
+.dark-theme .border-neutral-100 {
+  border-color: var(--border-color) !important;
+}
+
+.dark-theme input,
+.dark-theme select,
+.dark-theme textarea {
+  background-color: var(--bg-input) !important;
+  border-color: var(--border-color) !important;
+  color: #FFFFFF !important;
+}
+
+.dark-theme .bg-neutral-50,
+.dark-theme .bg-neutral-50\/50,
+.dark-theme .bg-neutral-50\/60,
+.dark-theme .bg-neutral-100 {
+  background-color: #13131A !important;
+  border-color: var(--border-color) !important;
+  color: #E5E7EB !important;
+}
+
+.dark-theme .text-neutral-900,
+.dark-theme .text-neutral-950,
+.dark-theme .text-neutral-800 {
+  color: #F3F4F6 !important;
+}
+
+.dark-theme .text-neutral-500,
+.dark-theme .text-neutral-600,
+.dark-theme .text-neutral-700 {
+  color: #9CA3AF !important;
+}
+
+.dark-theme .hover\:bg-neutral-50:hover {
+  background-color: #1E1E26 !important;
+}
+
+.dark-theme .hover\:border-neutral-300:hover {
+  border-color: #3F3F4F !important;
+}
+
+
+
